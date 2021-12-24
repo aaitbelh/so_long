@@ -6,7 +6,7 @@
 /*   By: aaitbelh <aaitbelh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 20:37:52 by aaitbelh          #+#    #+#             */
-/*   Updated: 2021/12/20 20:37:53 by aaitbelh         ###   ########.fr       */
+/*   Updated: 2021/12/23 00:59:04 by aaitbelh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,20 +45,20 @@ static void	git_pics(t_thing *pic)
 	int	p;
 
 	p = 64;
-	pic->wall = mlx_xpm_file_to_image(pic->mlx, "imgs/dirt64.xpm", &p, &p);
+	pic->wall = mlx_xpm_file_to_image(pic->mlx, "i/dirt.xpm", &p, &p);
 	if (!pic->wall)
 		img_nf(pic);
-	pic->player = mlx_xpm_file_to_image(pic->mlx, "imgs/cyber.xpm", &p, &p);
+	pic->player = mlx_xpm_file_to_image(pic->mlx, "i/char.xpm", &p, &p);
 	if (!pic->player)
 		img_nf(pic);
-	pic->floor = mlx_xpm_file_to_image(pic->mlx, "imgs/floor.xpm", &p, &p);
+	pic->floor = mlx_xpm_file_to_image(pic->mlx, "i/floor.xpm", &p, &p);
 	if (!pic->player)
 		img_nf(pic);
-	pic->exit = mlx_xpm_file_to_image(pic->mlx, "imgs/portal.xpm", &p, &p);
+	pic->exit = mlx_xpm_file_to_image(pic->mlx, "i/portal.xpm", &p, &p);
 	if (!pic->exit)
 		img_nf(pic);
-	pic->collection = mlx_xpm_file_to_image(pic->mlx, "imgs/coll.xpm", &p, &p);
-	if (!pic->collection)
+	pic->k = mlx_xpm_file_to_image(pic->mlx, "i/coll.xpm", &p, &p);
+	if (!pic->k)
 		img_nf(pic);
 	set_pic(pic);
 }
@@ -84,7 +84,7 @@ void	set_pic(t_thing *put)
 			else if (put->table[j][i] == 'E')
 				f(put->mlx, put->win, put->exit, i * 64, j * 64);
 			else if (put->table[j][i] == 'C')
-				f(put->mlx, put->win, put->collection, i * 64, j * 64);
+				f(put->mlx, put->win, put->k, i * 64, j * 64);
 			i++;
 		}
 		j++;

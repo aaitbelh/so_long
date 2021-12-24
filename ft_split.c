@@ -6,7 +6,7 @@
 /*   By: aaitbelh <aaitbelh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 11:37:46 by aaitbelh          #+#    #+#             */
-/*   Updated: 2021/12/20 18:59:07 by aaitbelh         ###   ########.fr       */
+/*   Updated: 2021/12/23 12:33:31 by aaitbelh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ static int	ft_counts(const char *s1, char c)
 	return (words);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(char *s, char c)
 {
 	char	**ptr;
 	int		i;

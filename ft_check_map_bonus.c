@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_map.c                                     :+:      :+:    :+:   */
+/*   ft_check_map_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaitbelh <aaitbelh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 11:29:31 by aaitbelh          #+#    #+#             */
-/*   Updated: 2021/12/23 12:52:46 by aaitbelh         ###   ########.fr       */
+/*   Updated: 2021/12/23 13:57:37 by aaitbelh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,8 +112,10 @@ int	ft_check_map(char *file, t_thing *extension)
 	extension->c = 0;
 	extension->p = 0;
 	extension->e = 0;
+	extension->x = 0;
 	extension->wight = 0;
 	extension->hight = 0;
+	extension->mov = 0;
 	extension->fd = open(file, O_RDONLY);
 	if (extension->fd == -1)
 		return (0);

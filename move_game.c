@@ -6,7 +6,7 @@
 /*   By: aaitbelh <aaitbelh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 20:58:12 by aaitbelh          #+#    #+#             */
-/*   Updated: 2021/12/20 20:14:50 by aaitbelh         ###   ########.fr       */
+/*   Updated: 2021/12/23 11:19:27 by aaitbelh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,8 +95,7 @@ int	move(int key, t_thing *g)
 	f = mlx_put_image_to_window;
 	if (key == 53 || key == 17)
 	{
-		printf("THE GAME EXIT");
-		exit(0);
+		cross(g);
 	}
 	if (key == 2)
 		move_right(g, f);

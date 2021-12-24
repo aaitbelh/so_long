@@ -6,7 +6,7 @@
 /*   By: aaitbelh <aaitbelh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/18 11:14:48 by aaitbelh          #+#    #+#             */
-/*   Updated: 2021/12/20 19:00:49 by aaitbelh         ###   ########.fr       */
+/*   Updated: 2021/12/23 11:57:50 by aaitbelh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	end_game(char **table)
 		free(table[i]);
 		i++;
 	}
+	free(table);
 	printf("\033[0;32m You Win 👏🤴 \n");
 	exit (0);
 }
@@ -111,6 +112,7 @@ char	*ft_strjoin(char *s1, char *s2)
 		i++;
 		j++;
 	}
+	free(s1);
 	str[i] = '\0';
 	return (str);
 }
